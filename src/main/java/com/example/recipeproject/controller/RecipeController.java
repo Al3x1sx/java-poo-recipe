@@ -8,13 +8,13 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/api/calories")
 public class RecipeController {
 
     @Autowired
     IngredientService ingredientService;
 
-    @GetMapping("recipe")
+    @GetMapping("/recipe")
     public List<Ingredient> listIngredients() {
         return ingredientService.listAllIngredients();
     }
