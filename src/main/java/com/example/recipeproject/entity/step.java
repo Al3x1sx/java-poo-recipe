@@ -6,20 +6,21 @@ import lombok.ToString;
 @Entity
 @Table(name="step")
 @ToString
-public class step {
+public class Step {
     private Long id;
     private String title;
     private String description;
 
-    public step() {
+    public Step() {
     }
 
-    public step(String title, String description) {
+    public Step(String title, String description) {
         this.title = title;
         this.description = description;
     }
 
     @Id
+    @Column(name="id_step")
     @GeneratedValue(strategy = GenerationType.AUTO)
     public Long getId() {
         return id;

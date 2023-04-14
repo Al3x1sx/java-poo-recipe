@@ -1,6 +1,7 @@
 package com.example.recipeproject.data;
 
 public class Rectangle {
+    private static Rectangle instance = null;
     private int length;
     private int width;
 
@@ -21,6 +22,14 @@ public class Rectangle {
     }
 
     public Rectangle(){
+    }
+
+    //pour essayer le singleton
+    public static Rectangle getInstance(int width, int length) {
+        if(instance == null) {
+            instance = new Rectangle(width, length);
+        }
+        return instance;
     }
 
     public Rectangle(int length, int width) {

@@ -22,6 +22,7 @@ public class Ingredient {
     }
 
     @Id
+    @Column(name = "id_ingredient")
     @GeneratedValue(strategy = GenerationType.AUTO)
     public Long getId() {
         return id;

@@ -58,4 +58,10 @@ public class FirstExercisesController {
         System.out.println("area of square is : " + square.areaCalculation());
         square.display();
     }
+
+    @GetMapping("/showFrame")
+    public void showFrame() {
+        //don't work
+        firstExercisesService.showNewFrame();
+    }
 }
