@@ -61,7 +61,7 @@ public class FirstExercisesController {
 
     @GetMapping("/showFrame")
     public void showFrame() {
-        //don't work
+        //Je n'arrive pas à faire fonctionner ça avec l'API spring mais le code fonctionne sur une application java basique
         firstExercisesService.showNewFrame();
     }
 }

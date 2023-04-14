@@ -5,9 +5,12 @@ import com.example.recipeproject.entity.Recipe;
 import com.example.recipeproject.entity.Step;
 import com.example.recipeproject.service.IngredientService;
 import com.example.recipeproject.service.RecipeService;
+import org.json.simple.parser.ParseException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -54,8 +57,8 @@ public class RecipeController {
     }
 
     @GetMapping("/recipe/{id}/analyze")
-    public void analyzeRecipe(@PathVariable Long id) {
-        recipeService.analyzeRecipe();
+    public String analyzeRecipe(@PathVariable Long id) throws IOException, ParseException {
+        return recipeService.analyzeRecipe(id);
     }
 
     @GetMapping("/recipe/random")
